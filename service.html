@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/output.css" />
+    <title>Document</title>
+  </head>
+  <body class="bg-[#65BABF1A] bg-opacity-90">
+    <nav class="w-full bg-white">
+      <div class="container mx-auto flex justify-between px-4">
+        <div class="logo h-16 overflow-hidden flex items-center">
+          <img src="/img/logo-navbar.png" alt="" class="h-28 object-contain" />
+        </div>
+        <button
+          onclick="openNavbar()"
+          class="toggle h-16 flex items-center md:hidden"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 256 256"
+            class="h-5 w-5 fill-[#025464] cursor-pointer"
+          >
+            <path
+              d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"
+            ></path>
+          </svg>
+        </button>
+
+        <ul
+          class="hidden md:flex gap-4 text-center justify-center items-center"
+        >
+          <li>
+            <a
+              class="text-sm text-[#000000] text-opacity-70 font-semibold hover:text-blue-500 transition-all duration-200 ease-in-out"
+              href="index.html"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              class="text-sm text-[#000000] text-opacity-70 font-semibold hover:text-blue-500 transition-all duration-200 ease-in-out"
+              href="about.html"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a
+              class="text-sm text-[#000000] text-opacity-70 font-semibold hover:text-blue-500 transition-all duration-200 ease-in-out"
+              href="partner.html"
+              >Partner</a
+            >
+          </li>
+          <li>
+            <a
+              class="text-sm text-[#000000] text-opacity-70 font-semibold hover:text-blue-500 transition-all duration-200 ease-in-out"
+              href="#"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              class="text-sm text-[#000000] text-opacity-70 font-semibold hover:text-blue-500 transition-all duration-200 ease-in-out"
+              href="galery.html"
+              >Galeri</a
+            >
+          </li>
+          <li>
+            <a
+              class="text-sm text-[#000000] text-opacity-70 font-semibold hover:text-blue-500 transition-all duration-200 ease-in-out"
+              href="info.html"
+              >Info</a
+            >
+          </li>
+          <li>
+            <a
+              class="text-sm text-[#000000] text-opacity-70 font-semibold hover:text-blue-500 transition-all duration-200 ease-in-out"
+              href=""
+              >Karir</a
+            >
+          </li>
+          <li>
+            <a
+              class="text-sm text-[#000000] text-opacity-70 font-semibold hover:text-blue-500 transition-all duration-200 ease-in-out"
+              href=""
+              >Kontak</a
+            >
+          </li>
+        </ul>
+        <button
+          onclick="openLogin()"
+          class="bg-[#018491] text-xs text-white rounded-xl px-4 py-2 my-4 hidden md:flex"
+        >
+          Masuk/Daftar
+        </button>
+      </div>
+    </nav>
+
+    <aside
+      class="w-full h-screen bg-white bg-opacity-90 fixed translate-x-full md:hidden transition-all duration-200 ease-in-out"
+    >
+      <div
+        class="content backdrop-blur h-full flex items-center justify-center"
+      >
+        <div class="flex justify-between m-3">
+          <button
+            onclick="openLogin()"
+            class="bg-[#018491] text-xs text-white rounded-xl px-4 py-2 my-4 absolute top-0 left-2 md:flex"
+          >
+            Masuk/Daftar
+          </button>
+          <button onclick="closeNavbar()" class="absolute top-2 right-2 z-[98]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 256 256"
+              class="fill-[#018491] h-10 w-10 bg-[#025464] bg-opacity-30"
+            >
+              <path
+                d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <ul class="flex flex-col gap-2 text-center">
+          <li>
+            <a class="text-xs text-[#018491] font-semibold" href="index.html"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a class="text-xs text-[#018491] font-semibold" href="about.html"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a class="text-xs text-[#018491] font-semibold" href="partner.html"
+              >Partner</a
+            >
+          </li>
+          <li>
+            <a class="text-xs text-[#018491] font-semibold" href="#"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a class="text-xs text-[#018491] font-semibold" href="galery.html"
+              >Galeri</a
+            >
+          </li>
+          <li>
+            <a class="text-xs text-[#018491] font-semibold" href="info.html"
+              >Info</a
+            >
+          </li>
+          <li>
+            <a class="text-xs text-[#018491] font-semibold" href="">Karir</a>
+          </li>
+          <li>
+            <a class="text-xs text-[#018491] font-semibold" href="">Kontak</a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <section
+      class="login w-full h-full bg-black bg-opacity-25 fixed z-[97] translate-x-full"
+    >
+      <div class="container mx-auto flex items-center justify-center mt-6 px-3">
+        <div
+          class="w-[820px] bg-white rounded-3xl p-2 md:flex md:p-10 relative"
+        >
+          <button
+            onclick="closeLogin()"
+            class="close absolute top-2 right-2 z-[98]"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 256 256"
+              class="fill-[#000000] opacity-20 h-8 w-8"
+            >
+              <path
+                d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"
+              ></path>
+            </svg>
+          </button>
+          <div class="hidden md:flex">
+            <div
+              class="image bg-[#D9D9D9] rounded-3xl md:w-80 md:flex md:justify-center md:items-center"
+            >
+              <img src="img/Enter OTP-amico 2.png" alt="" class="md:px-5" />
+            </div>
+          </div>
+          <div class="tittle px-5 md:w-full">
+            <h2 class="font-bold text-2xl text-black text-opacity-50 mt-5">
+              Sign in
+            </h2>
+            <p class="text-sm font-normal text-black mt-5">Email Addres</p>
+            <form action="" class="mt-3">
+              <input
+                type="email"
+                class="bg-[#D9D9D9] rounded-full w-full h-8 p-2 focus:ring-1 focus:ring-[#018491]"
+              />
+            </form>
+            <p class="text-sm font-normal text-black mt-2">Password</p>
+            <form action="" class="mt-3">
+              <input
+                type="password"
+                class="bg-[#D9D9D9] rounded-full w-full h-8 p-2 focus:ring-1 focus:ring-[#018491]"
+              />
+            </form>
+            <p
+              class="text-sm font-normal text-black text-opacity-50 text-right pr-2"
+            >
+              Lupa Password
+            </p>
+            <button
+              class="bg-[#018491] font-semibold rounded-full w-full h-8 mt-5 text-white"
+            >
+              Sign In
+            </button>
+            <button
+              onclick="openAkun()"
+              class="bg-[#D9D9D9] font-semibold rounded-full w-full h-8 mt-2 text-black text-opacity-70"
+            >
+              Create New Account
+            </button>
+            <button
+              class="bg-[#D9D9D9] font-semibold rounded-full w-full h-8 mt-2 text-black text-opacity-70 mb-10 flex justify-center items-center gap-2"
+            >
+              <img src="img/flat-color-icons_google.png" alt="" />Masuk/Daftar
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="new-account w-full h-full bg-black bg-opacity-25 fixed z-[97] translate-x-full"
+    >
+      <div class="container mx-auto flex items-center justify-center mt-6 px-3">
+        <div
+          class="w-[820px] bg-white rounded-3xl p-2 md:flex md:p-10 relative"
+        >
+          <button
+            onclick="closeAkun()"
+            class="close absolute top-2 right-2 z-[98]"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 256 256"
+              class="fill-[#000000] opacity-20 h-8 w-8"
+            >
+              <path
+                d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"
+              ></path>
+            </svg>
+          </button>
+          <div class="hidden md:flex">
+            <div
+              class="image bg-[#D9D9D9] rounded-3xl md:w-80 md:flex md:justify-center md:items-center"
+            >
+              <img src="img/Enter OTP-amico 2.png" alt="" class="md:px-5" />
+            </div>
+          </div>
+          <div class="tittle px-5 md:w-full">
+            <h2 class="font-bold text-2xl text-black text-opacity-50 mt-5">
+              NEW ACCOUNT
+            </h2>
+            <p class="text-sm font-normal text-black text-opacity-90 mt-2">
+              Hi, Come join us as a partner of Insania Sinergia.
+            </p>
+            <p class="text-sm font-normal text-black mt-5">Name</p>
+            <form action="" class="mt-3">
+              <input
+                type="text"
+                class="bg-[#D9D9D9] rounded-full w-full h-8 p-2 focus:ring-1 focus:ring-[#018491]"
+              />
+            </form>
+            <p class="text-sm font-normal text-black mt-2">Email Addres</p>
+            <form action="" class="mt-3">
+              <input
+                type="email"
+                class="bg-[#D9D9D9] rounded-full w-full h-8 p-2 focus:ring-1 focus:ring-[#018491]"
+              />
+            </form>
+            <p class="text-sm font-normal text-black mt-2">Password</p>
+            <form action="" class="mt-3">
+              <input
+                type="password"
+                class="bg-[#D9D9D9] rounded-full w-full h-8 p-2 focus:ring-1 focus:ring-[#018491]"
+              />
+            </form>
+            <p class="text-sm font-normal text-black mt-2">Confirm Password</p>
+            <form action="" class="mt-3">
+              <input
+                type="password"
+                class="bg-[#D9D9D9] rounded-full w-full h-8 p-2 focus:ring-1 focus:ring-[#018491]"
+              />
+            </form>
+            <button
+              class="bg-[#018491] font-semibold rounded-full w-full h-8 mt-2 text-white"
+            >
+              Make Account
+            </button>
+            <button
+              class="bg-[#d9d9d900] border border-[#018491] font-bold rounded-full w-full h-8 mt-5 text-black"
+            >
+              Sign Up With Google
+            </button>
+            <p class="text-sm font-normal text-black mt-2">
+              Already have account?
+              <button onclick="openLogin()" class="underline text-sky-400">
+                login
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <h1
+      class="font-semibold text-3xl text-black opacity-70 px-16 mx-auto mt-14 mb-4"
+    >
+      Pelayanan Kami
+    </h1>
+
+    <section>
+      <div class="container px-8 mb-24 mx-auto">
+        <h2 class="mt-24 font-bold text-xl text-black mb-7">Home>Service</h2>
+        <div
+          class="grid grid-cols-2 gap-4 md:grid-cols-3 md:justify-center lg:grid-cols-4"
+        >
+          <div class="card rounded border border-black border-opacity-50 mb-6">
+            <div class="flex justify-center items-center">
+              <img src="img/Service 24_7-amico 1.png" alt="" />
+            </div>
+            <h2 class="text-center font-semibold text-2xl mt-8 mb-6">
+              E-Faktur Jasa
+            </h2>
+          </div>
+
+          <div class="card rounded border border-black border-opacity-50 mb-6">
+            <div class="flex justify-center items-center">
+              <img src="img/Login-amico (1) 2.png" alt="" />
+            </div>
+            <h2 class="text-center font-semibold text-2xl mt-8 mb-6">
+              Pendaftaran PT
+            </h2>
+          </div>
+
+          <div class="card rounded border border-black border-opacity-50 mb-6">
+            <div class="flex justify-center items-center">
+              <img src="img/Consent-amico 2.png" alt="" />
+            </div>
+            <h2 class="text-center font-semibold text-2xl mt-8 mb-6">
+              Jasa Pembukuan
+            </h2>
+          </div>
+
+          <div class="card rounded border border-black border-opacity-50 mb-6">
+            <div class="flex justify-center items-center">
+              <img src="img/Service 24_7-amico 1.png" alt="" />
+            </div>
+            <h2 class="text-center font-semibold text-2xl mt-8 mb-6">
+              E-Faktur Jasa
+            </h2>
+          </div>
+
+          <div class="card rounded border border-black border-opacity-50 mb-6">
+            <div class="flex justify-center items-center">
+              <img src="img/Consent-amico 2.png" alt="" />
+            </div>
+            <h2 class="text-center font-semibold text-2xl mt-8 mb-6">
+              Jasa Pembukuan
+            </h2>
+          </div>
+
+          <div class="card rounded border border-black border-opacity-50 mb-6">
+            <div class="flex justify-center items-center">
+              <img src="img/Closed Stores-rafiki (1) 2.png" alt="" />
+            </div>
+            <h2 class="text-center font-semibold text-2xl mt-8 mb-6">
+              Penutupan PT
+            </h2>
+          </div>
+
+          <div class="card rounded border border-black border-opacity-50 mb-6">
+            <div class="flex justify-center items-center">
+              <img src="img/Service 24_7-amico 1.png" alt="" />
+            </div>
+            <h2 class="text-center font-semibold text-2xl mt-8 mb-6">
+              E-Faktur Jasa
+            </h2>
+          </div>
+
+          <div class="card rounded border border-black border-opacity-50 mb-6">
+            <div class="flex justify-center items-center">
+              <img src="img/Closed Stores-rafiki (1) 2.png" alt="" />
+            </div>
+            <h2 class="text-center font-semibold text-2xl mt-8 mb-6">
+              Penutupan PT
+            </h2>
+          </div>
+
+          <div class="card rounded border border-black border-opacity-50 mb-6">
+            <div class="flex justify-center items-center">
+              <img src="img/Service 24_7-amico 1.png" alt="" />
+            </div>
+            <h2 class="text-center font-semibold text-2xl mt-8 mb-6">
+              E-Faktur Jasa
+            </h2>
+          </div>
+
+          <div class="card rounded border border-black border-opacity-50 mb-6">
+            <div class="flex justify-center items-center">
+              <img src="img/Login-amico (1) 2.png" alt="" />
+            </div>
+            <h2 class="text-center font-semibold text-2xl mt-8 mb-6">
+              Pendaftaran PT
+            </h2>
+          </div>
+
+          <div class="card rounded border border-black border-opacity-50 mb-6">
+            <div class="flex justify-center items-center">
+              <img src="img/Consent-amico 2.png" alt="" />
+            </div>
+            <h2 class="text-center font-semibold text-2xl mt-8 mb-6">
+              Jasa Pembukuan
+            </h2>
+          </div>
+
+          <div class="card rounded border border-black border-opacity-50 mb-6">
+            <div class="flex justify-center items-center">
+              <img src="img/Service 24_7-amico 1.png" alt="" />
+            </div>
+            <h2 class="text-center font-semibold text-2xl mt-8 mb-6">
+              E-Faktur Jasa
+            </h2>
+          </div>
+
+          <div class="card rounded border border-black border-opacity-50 mb-6">
+            <div class="flex justify-center items-center">
+              <img src="img/Consent-amico 2.png" alt="" />
+            </div>
+            <h2 class="text-center font-semibold text-2xl mt-8 mb-6">
+              Jasa Pembukuan
+            </h2>
+          </div>
+
+          <div class="card rounded border border-black border-opacity-50 mb-6">
+            <div class="flex justify-center items-center">
+              <img src="img/Closed Stores-rafiki (1) 2.png" alt="" />
+            </div>
+            <h2 class="text-center font-semibold text-2xl mt-8 mb-6">
+              Penutupan PT
+            </h2>
+          </div>
+
+          <div class="card rounded border border-black border-opacity-50 mb-6">
+            <div class="flex justify-center items-center">
+              <img src="img/Service 24_7-amico 1.png" alt="" />
+            </div>
+            <h2 class="text-center font-semibold text-2xl mt-8 mb-6">
+              E-Faktur Jasa
+            </h2>
+          </div>
+
+          <div class="card rounded border border-black border-opacity-50 mb-6">
+            <div class="flex justify-center items-center">
+              <img src="img/Closed Stores-rafiki (1) 2.png" alt="" />
+            </div>
+            <h2 class="text-center font-semibold text-2xl mt-8 mb-6">
+              Penutupan PT
+            </h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-[#025464] bg-opacity-50">
+      <div
+        class="container px-8 py-8 mx-auto md:grid md:grid-cols-2 lg:flex lg:justify-between lg:items-center"
+      >
+        <div class="flex flex-col gap-3 lg:h-72 lg:justify-center">
+          <img
+            src="img/navbar.png"
+            alt=""
+            class="h-12 object-contain mb-6"
+            style="width: 150px"
+          />
+          <div class="flex gap-3">
+            <img
+              src="img/ic_outline-home.png"
+              alt=""
+              class="md:w-8 md:h-6 lg:w-fit lg:h-fit"
+            />
+            <p class="font-semibold text-base text-white">
+              Jl. Perintis Kemerdekaan No.59, Kota Makassar
+            </p>
+          </div>
+          <div class="flex gap-3 mb-10">
+            <img
+              src="img/bytesize_telephone.png"
+              alt=""
+              class="md:w-8 md:h-6 lg:w-fit lg:h-fit"
+            />
+            <p class="font-semibold text-base text-white">
+              +6281-2345-6782 insaniasinergia@gmail.com
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-col lg:h-72 lg:justify-center">
+          <h2 class="font-bold text-white text-[18px] mb-5">
+            Layanan Insania Sinergia
+          </h2>
+          <p class="font-semibold text-base text-white">Jasa Pembukuan</p>
+          <p class="font-semibold text-base text-white">Jasa Pendampingan</p>
+          <p class="font-semibold text-base text-white">Konsultasi Pajak</p>
+          <p class="font-semibold text-base text-white">
+            Pembuatan dan Perubahan akta
+          </p>
+          <p class="font-semibold text-base text-white mb-10">
+            Kuasa hukum pengadilan pajak
+          </p>
+        </div>
+
+        <div class="flex flex-col lg:h-72 lg:justify-center">
+          <h2 class="font-bold text-white text-[18px] mb-5">Sumber Data</h2>
+          <p class="font-semibold text-base text-white">FAQ</p>
+          <p class="font-semibold text-base text-white mb-10">Studi Kasus</p>
+        </div>
+
+        <div class="flex flex-col lg:h-72 lg:justify-center">
+          <h2 class="font-bold text-white text-[18px] mb-5">Company</h2>
+          <p class="font-semibold text-base text-white">About</p>
+          <p class="font-semibold text-base text-white">Contact</p>
+          <p class="font-semibold text-base text-white">Careers</p>
+          <p class="font-semibold text-base text-white">Youtube</p>
+          <p class="font-semibold text-base text-white mb-10">Instagram</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const sidebar = document.querySelector("aside");
+      const login = document.querySelector(".login");
+      const akun = document.querySelector(".new-account");
+
+      function openNavbar() {
+        sidebar.classList.add("translate-x-0");
+        sidebar.classList.remove("translate-x-full");
+      }
+
+      function closeNavbar() {
+        sidebar.classList.remove("translate-x-0");
+        sidebar.classList.add("translate-x-full");
+      }
+
+      function openLogin() {
+        login.classList.add("translate-x-0");
+        login.classList.remove("translate-x-full");
+      }
+
+      function closeLogin() {
+        login.classList.remove("translate-x-0");
+        login.classList.add("translate-x-full");
+      }
+
+      function openAkun() {
+        akun.classList.add("translate-x-0");
+        akun.classList.remove("translate-x-full");
+      }
+
+      function closeAkun() {
+        akun.classList.remove("translate-x-0");
+        akun.classList.add("translate-x-full");
+      }
+    </script>
+  </body>
+</html>
